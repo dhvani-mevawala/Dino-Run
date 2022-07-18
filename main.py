@@ -311,8 +311,9 @@ def eval_genomes(genomes, config):
                 sys.exit()
         
         #reset screen
-        if mytime.tm_hour >= 5 and mytime.tm_hour <= 17:
+        if mytime.tm_hour >= 5 and mytime.tm_hour <= 16:
             screen.fill((255, 255, 255))
+            print("if")
         else:
             screen.fill((25, 25, 25))   
         
@@ -404,10 +405,11 @@ def menu(death_count):
     run = True
     while run:
         
-        if mytime.tm_hour >= 5 and mytime.tm_hour <= 17:
+        if mytime.tm_hour >= 5 and mytime.tm_hour <= 16:
             screen.fill((255, 255, 255))
         else:
             screen.fill((50, 50, 50))
+            #print("else block")
             
         
         font = pygame.font.Font('freesansbold.ttf', 30)
